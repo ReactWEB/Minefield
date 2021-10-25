@@ -7,6 +7,8 @@
 
 const field = document.querySelector('.minefield');
 const btn = document.querySelector('.start__btn');
+let count = document.querySelector('.score');
+let counter = 0;
 
 for (let i = 0; i < 99; i++) {
   let tile = document.createElement('div');
@@ -24,11 +26,15 @@ const randInt = (min, max) => {
 const changeColor = () => {
   let startBox = randInt(0, arrBoxes.length - 1);  
   let randomBox = arrBoxes[startBox];
-  randomBox.classList.add('indigo');
-  randomBox.addEventListener('click', () => {
-    console.log("Hello");
-  });
-};
+  randomBox.classList.add('indigo');  
+  const clickBox = () => {  
+    randomBox.classList.remove('indigo'); 
+    counter++;   
+    count.innerText = counter; 
+    randomBox.removeEventListener('click', clickBox);   
+  };
+  randomBox.addEventListener('click', clickBox);  
+  };
 
 btn.addEventListener('click', changeColor);
 
