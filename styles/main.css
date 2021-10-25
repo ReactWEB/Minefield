@@ -1,0 +1,64 @@
+.main {
+  position: absolute;
+  border: 1px solid black;
+  width: 50%;
+  height: 70vh;
+  top: 5%;
+  left: 24%;
+}
+
+.main .manage {
+  position: absolute;
+  top: 1%;
+  left: 14%;
+  width: 70%;
+  height: 5.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .manage .score {
+  width: 20%;
+  height: 5vh;
+  border: 1px solid black;
+}
+
+.main .manage .start__btn {
+  width: 20%;
+  height: 5vh;
+}
+
+.main .manage .timer {
+  width: 20%;
+  height: 5vh;
+  border: 1px solid black;
+  font: bold 30px Arial;
+}
+
+.main .minefield {
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  width: 55%;
+  height: 60vh;
+  border: 1px solid black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.main .minefield .minefield__box {
+  width: 98%;
+  height: 98%;
+  border: 1px solid black;
+}
+
+.main .minefield .indigo {
+  background-color: #4b0082;
+}
+/*# sourceMappingURL=main.css.map */
