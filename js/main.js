@@ -15,13 +15,16 @@ for (let i = 0; i < 99; i++) {
   field.appendChild(tile);
 }
 
-//3. Написать функцию события, в которой будут рандомно, в одном из квадратов, появляться класс с синим цветом при нажатии на кнопку старт. У этого квадрата добавить свое событие клика
+let arrBoxes = document.querySelectorAll('.minefield__box');
+console.log(arrBoxes);
 
 const randInt = (min, max) => {
   let rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 }
 
-btn.addEventListener('click', () => {
-  tile.innerHTML = '<div class="indigo"></div>';
+const changePosition = setInterval(() => {
+  let startPosition = randInt(arrBoxes[0], arrBoxes.length - 1);  
 });
+
+btn.addEventListener('click', changePosition);
