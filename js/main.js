@@ -24,15 +24,24 @@ const randInt = (min, max) => {
 }
 
 const changeColor = () => {
+  //дописать ремув ивента changeColor
+  document.removeEventListener('click', changeColor);
+  
   let startBox = randInt(0, arrBoxes.length - 1);  
   let randomBox = arrBoxes[startBox];
-  randomBox.classList.add('indigo');  
+
+  randomBox.classList.add('indigo'); 
+  
   const clickBox = () => {  
+    //дописать ремув ивента changeColor
+    document.removeEventListener('click', changeColor);
     randomBox.classList.remove('indigo'); 
     counter++;   
     count.innerText = counter; 
     randomBox.removeEventListener('click', clickBox);   
   };
+  //добавить на randomBox ивент changeColor
+  randomBox.addEventListener('click', changeColor);
   randomBox.addEventListener('click', clickBox);  
   };
 
